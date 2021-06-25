@@ -1,21 +1,27 @@
 var task = {};
+var container = $(".container");
+var textAreaEl = document.querySelector("textarea")
+var miltaryhours=[9,10,11,12,13,14,15,16,17]
+var hours = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+var miltaryhours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-///  Code to display current day
-var rightNow = moment().format("dddd, h:mm A");
-console.log(rightNow);
+//Time and date display on page header
+var rightNow = moment().format("dddd hh:mm A");
 $("#currentDay").append(rightNow);
 
-//Save the data to localstorage
-$(".saveBtn").click(function () {
-  var textAreaEl = $("textarea").val();
-  console.log(textAreaEl);
-  localStorage.setItem("taskInfo", JSON.stringify(textAreaEl));
-});
+//for loop to create each time block
+for (var i = 0; i < hours.length; i++) {
+  container.append(` 
+  <div class="row main-container ">
+  <div class="col-sm-1 hour time-block">${hours[i]}</div>
+   <div class="col-sm-9 "><textarea  class="form-control h-100 w-100 p-0 past present future"></textarea></div>
+  <div class="col-sm-2 col-space"> <button class="saveBtn h-100  "><i class="far fa-save"></i></button></div>
+ </div>`);
+}
 
 //Load the data from localstorage
 var loadTask = function () {
   task = JSON.parse(localStorage.getItem("taskInfo"));
-
   if (!task) {
     return;
   }
@@ -24,62 +30,51 @@ var loadTask = function () {
 };
 loadTask();
 
-//var scheduleTImeEl = ["9", "10", "11", "12", "1", "2", "3", "4", "5"];
-//   for (let i = 0; i < scheduleTImeEl.length; i++) {
-//     if(scheduleTImeEl.note[i]){
-//         console.log("index is", i)
-//         console.log("index is",scheduleTImeEl[i])
-//     }
-
-//   }
-
-var timeBlock = [
-  {
-    time: "9:00",
-    note: "",
-  },
-  {
-    time: "10:00",
-    note: "",
-  },
-  {
-    time: "11:00",
-    note: "",
-  },
-  {
-    time: "12:00",
-    note: "",
-  },
-  {
-    time: "1:00",
-    note: "",
-  },
-  {
-    time: "2:00",
-    note: "",
-  },
-  {
-    time: "3:00",
-    note: "",
-  },
-  {
-    time: "4:00",
-    note: "",
-  },
-  {
-    time: "5:00",
-    note: "",
-  },
-];
 
 
-for (let i = 0; i < timeBlock.length; i++) {
-  if (timeBlock[i].note) {
-    console.log("index is", i);
-    console.log("index is", timeBlock[i]);
-  }
-//   var newEl = document.createElement("tr");
-//   newEl.textContent = timeBlock[i].time;
-}
+//Save task to local storage
+$(".saveBtn").click(function () {
+ var oldTask = []
+ var txt = $("textarea").val();
+      var newTask = txt;
+      oldTask.push(newTask)
+  localStorage.setItem("taskInfo", JSON.stringify(oldTask));
+});
+  
 
-//var striningfield = JSON.stringify(scheduleTImeEl);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
