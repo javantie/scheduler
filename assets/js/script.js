@@ -25,14 +25,20 @@ var loadTask = function () {
 };
 loadTask();
 
-//var scheduleTImeEl = ["9", "10", "11", "12", "1", "2", "3", "4", "5"];
-//   for (let i = 0; i < scheduleTImeEl.length; i++) {
-//     if(scheduleTImeEl.note[i]){
-//         console.log("index is", i)
-//         console.log("index is",scheduleTImeEl[i])
-//     }
 
-//   }
+
+var TimeEl = [];
+
+for (let i = 9; i < 8; i++) {
+  var newObj = {
+    time:"i",
+    note: ""
+  }
+  
+}
+
+    
+
 
 var timeBlock = [
   {
@@ -83,4 +89,4 @@ var timeBlock = [
 //   newEl.textContent = timeBlock[i].time;
 // }
 
-//var striningfield = JSON.stringify(scheduleTImeEl);
+// var striningfield = JSON.stringify(scheduleTImeEl);
