@@ -11,7 +11,6 @@ console.log(tracker)
 //Save the data to localstorage
 $(".saveBtn").click(function () {
   var oldTask = [];
-  console.log($(this).parent().siblings("div").children()[0])
   var textValEl = $(this).parent().siblings("div").children()[0];
   console.log($(textValEl).attr("id"));
   task.push({
