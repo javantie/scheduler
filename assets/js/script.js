@@ -7,15 +7,16 @@ $("#currentDay").append(rightNow);
 
 //Save the data to localstorage
 $(".saveBtn").click(function () {
-  var textAreaEl = $("textarea").val();
-  console.log(textAreaEl);
-  localStorage.setItem("taskInfo", JSON.stringify(textAreaEl));
+  var oldTask = [];
+  var newTask = $("textarea").val();
+  console.log(newTask);
+  oldTask.push(newTask);
+  localStorage.setItem("taskInfo", JSON.stringify(oldTask));
 });
 
 //Load the data from localstorage
 var loadTask = function () {
   task = JSON.parse(localStorage.getItem("taskInfo"));
-
   if (!task) {
     return;
   }
@@ -73,13 +74,13 @@ var timeBlock = [
 ];
 
 
-for (let i = 0; i < timeBlock.length; i++) {
-  if (timeBlock[i].note) {
-    console.log("index is", i);
-    console.log("index is", timeBlock[i]);
-  }
+// for (let i = 0; i < timeBlock.length; i++) {
+//   if (timeBlock[i].note) {
+//     console.log("index is", i);
+//     console.log("index is", timeBlock[i]);
+//   }
 //   var newEl = document.createElement("tr");
 //   newEl.textContent = timeBlock[i].time;
-}
+// }
 
 //var striningfield = JSON.stringify(scheduleTImeEl);
