@@ -1,10 +1,12 @@
 var task = []
 
-
 ///  Code to display current day
 var rightNow = moment().format("dddd, h:mm A");
 console.log(rightNow);
 $("#currentDay").append(rightNow);
+
+var tracker = moment().hour()
+console.log(tracker)
 
 //Save the data to localstorage
 $(".saveBtn").click(function () {
@@ -45,73 +47,3 @@ loadTask();
 
 
 
-
-
-
-
-
-
-
-// var TimeEl = [];
-
-// for (let i = 9; i < 8; i++) {
-//   var newObj = {
-//     time:"i",
-//     note: ""
-//   }
-  
-// }
-
-    
-
-
-// var timeBlock = [
-//   {
-//     time: "9:00",
-//     note: "",
-//   },
-//   {
-//     time: "10:00",
-//     note: "",
-//   },
-//   {
-//     time: "11:00",
-//     note: "",
-//   },
-//   {
-//     time: "12:00",
-//     note: "",
-//   },
-//   {
-//     time: "1:00",
-//     note: "",
-//   },
-//   {
-//     time: "2:00",
-//     note: "",
-//   },
-//   {
-//     time: "3:00",
-//     note: "",
-//   },
-//   {
-//     time: "4:00",
-//     note: "",
-//   },
-//   {
-//     time: "5:00",
-//     note: "",
-//   },
-// ];
-
-
-// for (let i = 0; i < timeBlock.length; i++) {
-//   if (timeBlock[i].note) {
-//     console.log("index is", i);
-//     console.log("index is", timeBlock[i]);
-//   }
-//   var newEl = document.createElement("tr");
-//   newEl.textContent = timeBlock[i].time;
-// }
-
-// var striningfield = JSON.stringify(scheduleTImeEl);
