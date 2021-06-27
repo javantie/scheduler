@@ -1,10 +1,10 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -22,22 +22,22 @@ textarea{
   background-image: url(../images/beach-quotes.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
-  font-family:cursive;
+  background-position: center;
+  font-family: cursive;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
 
 .row {
   white-space: pre-wrap;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -48,9 +48,6 @@ textarea{
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  background-image: url(../images/wall-clock-hand-drawn-vector-260nw-506662186.jpg);
-  background-size: cover;
-  background-position:center;
 }
 
 .past {
@@ -72,7 +69,7 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #06aed5;
   color: white;
   height: 100%;
   width: 100%;
@@ -82,16 +79,43 @@ textarea{
 
 .saveBtn i:hover {
   font-size: 40px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.col-space{
+.col-space {
   padding: 0px;
-  
 }
-.space{
+.space {
   text-align: center;
 }
-.row-space{
+.row-space {
   padding: 0px;
+}
+
+.clearbtn {
+  border-radius: 15px;
+  outline: none;
+  background-color: rgb(75, 141, 158);
+  font-weight: 600;
+  color: white;
+  box-shadow: 0px 0px 15px rgb(80, 191, 199);
+  border: 2px rgb(87, 183, 212) solid;
+}
+
+@media screen and (min-width: 768px) {
+  .hour {
+    background-image: url(../images/wall-clock-hand-drawn-vector-260nw-506662186.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+.jumbotron {
+  background-image: url(../images/beach-sunset.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 }

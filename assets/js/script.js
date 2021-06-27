@@ -42,3 +42,6 @@ var loadTask = function () {
 };
 loadTask();
 
+$(".clearbtn").click(function () {
+  localStorage.clear();
+});
